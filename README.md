@@ -1,11 +1,11 @@
-About expat
-===========
+About expat-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/expat-feedstock/blob/main/LICENSE.txt)
 
 Home: http://expat.sourceforge.net/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/expat-feedstock/blob/main/LICENSE.txt)
 
 Summary: Expat XML parser library in C
 
@@ -30,42 +30,42 @@ Current build status
               <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=276&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=linux&configuration=linux_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_aarch64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=276&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_ppc64le</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=276&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=276&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=osx&configuration=osx_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=276&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=276&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=win&configuration=win_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/expat-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -82,6 +82,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-expat-green.svg)](https://anaconda.org/conda-forge/expat) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/expat.svg)](https://anaconda.org/conda-forge/expat) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/expat.svg)](https://anaconda.org/conda-forge/expat) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/expat.svg)](https://anaconda.org/conda-forge/expat) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libexpat-green.svg)](https://anaconda.org/conda-forge/libexpat) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libexpat.svg)](https://anaconda.org/conda-forge/libexpat) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libexpat.svg)](https://anaconda.org/conda-forge/libexpat) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libexpat.svg)](https://anaconda.org/conda-forge/libexpat) |
 
 Installing expat
 ================
@@ -93,16 +94,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `expat` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `expat, libexpat` can be installed with `conda`:
 
 ```
-conda install expat
+conda install expat libexpat
 ```
 
 or with `mamba`:
 
 ```
-mamba install expat
+mamba install expat libexpat
 ```
 
 It is possible to list all of the versions of `expat` available on your platform with `conda`:
@@ -197,6 +198,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@isuruf](https://github.com/isuruf/)
 * [@kwilcox](https://github.com/kwilcox/)
 * [@mingwandroid](https://github.com/mingwandroid/)
 * [@msarahan](https://github.com/msarahan/)
