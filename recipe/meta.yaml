@@ -45,6 +45,10 @@ outputs:
         - gnuconfig  # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
+      host:
+      run:
+      run_constrained:
+        - expat {{ version }}.*
 
   - name: expat
     script: install.sh   # [unix]
