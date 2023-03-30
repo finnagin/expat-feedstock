@@ -33,6 +33,11 @@ outputs:
       - lib/libexpat.so.*          # [linux]
       - lib/libexpat.*.dylib       # [osx]
       - Library/bin/libexpat.dll   # [win]
+    build:
+      ignore_run_exports_from:
+        # This package needs the compiler for the tests, but the library
+        # does not link to libstdc++.so
+        - {{ compiler('cxx') }}
     requirements:
       build:
         - cmake  # [win]
@@ -49,6 +54,10 @@ outputs:
         # changes soname at major versions, default settings OK
         # https://abi-laboratory.pro/tracker/timeline/expat/
         - {{ pin_subpackage('libexpat') }}
+      ignore_run_exports_from:
+        # This package needs the compiler for the tests, but the executable
+        # does not link to libstdc++.so
+        - {{ compiler('cxx') }}
     requirements:
       build:
         - cmake  # [win]
