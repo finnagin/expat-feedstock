@@ -23,8 +23,6 @@ requirements:
     - libtool  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-  host:
-    - msinttypes  # [win and vc<14]
 
 test:
   commands:
