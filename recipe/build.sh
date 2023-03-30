@@ -1,6 +1,6 @@
 #!/bin/bash
 # Get an updated config.sub and config.guess
-cp $BUILD_PREFIX/share/libtool/build-aux/config.* ./conftools
+cp $BUILD_PREFIX/share/gnuconfig/config.* ./conftools
 
 ./configure --prefix=$PREFIX \
             --host=${HOST} \
