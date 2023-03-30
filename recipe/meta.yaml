@@ -86,6 +86,7 @@ extra:
   recipe-maintainers:
     - kwilcox
     - ocefpaf
+    - isuruf
     - pelson
     - mingwandroid
     - msarahan
