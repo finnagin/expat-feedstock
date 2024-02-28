@@ -14,9 +14,9 @@ build:
 
 requirements:
   build:
-    - cmake  # [win]
-    - make  # [unix]
-    - gnuconfig  # [unix]
+    - cmake-no-system   # [win]
+    - make              # [unix]
+    - gnuconfig         # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -40,9 +40,9 @@ outputs:
         - {{ compiler('cxx') }}
     requirements:
       build:
-        - cmake  # [win]
-        - make  # [unix]
-        - gnuconfig  # [unix]
+        - cmake-no-system   # [win]
+        - make              # [unix]
+        - gnuconfig         # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
       host:
@@ -64,9 +64,9 @@ outputs:
         - {{ compiler('cxx') }}
     requirements:
       build:
-        - cmake  # [win]
-        - make  # [unix]
-        - gnuconfig  # [unix]
+        - cmake-no-system   # [win]
+        - make              # [unix]
+        - gnuconfig         # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
       host:
