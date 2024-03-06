@@ -1,4 +1,4 @@
-{% set version = "2.5.0" %}
+{% set version = "2.6.1" %}
 {% set ver = version|replace(".", "_") %}
 
 package:
@@ -7,16 +7,16 @@ package:
 
 source:
   url: https://github.com/libexpat/libexpat/releases/download/R_{{ ver }}/expat-{{ version }}.tar.bz2
-  sha256: 6f0e6e01f7b30025fa05c85fdad1e5d0ec7fd35d9f61b22f34998de11969ff67
+  sha256: 4677d957c0c6cb2a3321101944574c24113b637c7ab1cf0659a27c5babc201fd
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
-    - cmake  # [win]
-    - make  # [unix]
-    - gnuconfig  # [unix]
+    - cmake-no-system   # [win]
+    - make              # [unix]
+    - gnuconfig         # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -27,7 +27,7 @@ test:
 
 outputs:
   - name: libexpat
-    script: install.sh   # [unix]
+    script: install.sh  # [unix]
     script: install.bat  # [win]
     files:
       - lib/libexpat.so.*          # [linux]
@@ -40,9 +40,9 @@ outputs:
         - {{ compiler('cxx') }}
     requirements:
       build:
-        - cmake  # [win]
-        - make  # [unix]
-        - gnuconfig  # [unix]
+        - cmake-no-system   # [win]
+        - make              # [unix]
+        - gnuconfig         # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
       host:
@@ -51,7 +51,7 @@ outputs:
         - expat {{ version }}.*
 
   - name: expat
-    script: install.sh   # [unix]
+    script: install.sh  # [unix]
     script: install.bat  # [win]
     build:
       run_exports:
@@ -64,9 +64,9 @@ outputs:
         - {{ compiler('cxx') }}
     requirements:
       build:
-        - cmake  # [win]
-        - make  # [unix]
-        - gnuconfig  # [unix]
+        - cmake-no-system   # [win]
+        - make              # [unix]
+        - gnuconfig         # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
       host:
